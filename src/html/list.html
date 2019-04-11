@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表-英雄联盟周边商城</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/lib/font/iconfont.css">
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <!-- 导航标题 -->
+        <div class="nav-title">
+            <span><a href="">商城首页</a></span>
+            <i></i>
+            <span id="nav-title"></span>
+        </div>
+        <!-- banner -->
+        <div class="banner" id="banner"><img src="/img/sculpture.jpg"></div>
+        <!-- side -->
+        <div class="list-box" id="list-box">
+            <div class="side">
+                <div id="dir">
+                    <h2><a href="">雕塑手办</a></h2>
+                    <p><a href="">中型雕塑</a></p>
+                    <p><a href="">手办</a></p>
+                    <p><a href="">限定手办</a></p>
+                    <p><a href="">大型雕塑</a></p>
+                    <p><a href="">迷你手办</a></p>
+                </div>
+                <div>
+                    <h2><a href="">价格</a></h2>
+                    <p><a href="">100-300元</a></p>
+                    <p><a href="">300元以上</a></p>
+                </div>
+                <div>
+                    <h2><a href="">英雄</a></h2>
+                    <p><a href="">上单</a></p>
+                    <p><a href="">中单</a></p>
+                    <p><a href="">ADC</a></p>
+                    <p><a href="">辅助</a></p>
+                    <p><a href="">打野</a></p>
+                    <p><a href="">坦克</a></p>
+                    <p><a href="">法师</a></p>
+                    <p><a href="">射手</a></p>
+                    <p><a href="">刺客</a></p>
+                </div>
+            </div>
+            
+            <!-- 排序与分页 -->
+            <div class="list-box">
+                <div class="paging-top">
+                    <div class="left">
+                        <p id="rank-name">人气</p>
+                        <ul>
+                            <li id="popularity">人气</li>
+                            <li id="sale-num">销量</li>
+                            <li id="new-product">新品</li>
+                            <li id="adesc">价格升序</li>
+                            <li id="desc">价格降序</li>
+                        </ul>
+                    </div>
+                    <div class="center">
+                        <input type="checkbox" id="storage">
+                        <span>仅显示有货</span>
+                        <div></div>
+                    </div>
+                    <div class="right">
+                        <span class="prev-page">上一页</span>
+                        <div class="page-box">
+                        </div>
+                        <span class="next-page">下一页</span>
+                    </div>
+                </div>      
+                <!-- shopItem -->
+                <div id="shopItem" class="shopItem"></div>
+            </div>
+        </div>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>

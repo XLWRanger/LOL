@@ -1,0 +1,155 @@
+@import "base";
+@import "header";
+@import "footer";
+@import "shopItem";
+body{
+    overflow: auto;
+    main{
+        min-width: 1280px;
+        margin-top: 120px;
+        .nav-title{
+            height: 60px;
+            border: 1px solid;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            span:nth-child(1){
+                margin-left: 60px;
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+            span:nth-child(3){
+                margin-left: 20px; 
+            }
+            i{
+                margin-left: 20px;
+                display: inline-block;
+                width: 10px;
+                height: 13px;
+                background: url(/img/list.jpg) no-repeat 2px 3px;
+            }
+            a{
+                color: #4b4b4b;
+            }
+        }
+        .banner{
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+        .list-box{
+            display: flex;
+            position: relative;
+            .side{
+                margin: 5% 0 5% 4%;
+                width: 7%;
+                div{
+                    margin-top: 40px;
+                    h2{
+                        width: 90px;
+                        padding-left: 12px;
+                        margin-bottom: 12px;
+                        line-height: 22px;
+                        font-size: 22px;
+                        background: url(/img/h2.jpg) no-repeat left center;
+                        a{
+                            color: #202020;
+                        }
+                    }
+                    p a{
+                        display: inline-block;
+                        height: 30px;
+                        line-height: 30px;
+                        text-indent: 12px;
+                        font-size: 14px;
+                        color: #000;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .list-box{
+                position: relative;
+                width: 93%;
+                margin-top: 105px;
+                .paging-top{
+                    width: 94%;
+                    padding: 0 3%;
+                    position: absolute;
+                    right: 0;
+                    top: -70px;
+                    color: #919799;
+                    .left{
+                        float: left;
+                        cursor: pointer;
+                        font-size: 15px;
+                        p{
+                            padding-left: 40px;
+                            line-height: 38px;
+                            box-sizing: border-box;
+                            width: 130px;
+                            height: 38px;
+                            border: 1px solid #bcbfc1;
+                            background: url(/img/list-down.jpg) no-repeat 89px center;
+                        }
+                        ul{
+                            display: none;
+                            position: relative;
+                            z-index: 999;
+                            li{
+                                width: 128px;
+                                height: 36px;
+                                line-height: 36px;
+                                text-align: center;
+                                border: 1px solid #bcbfc1;
+                                border-top: none;
+                                background: #fff;
+                                &:hover{
+                                    background: #aeb2b3;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        &:hover ul{
+                            display: block;
+                        }
+                    }
+                    .center{
+                        float: left;
+                        margin-left: 22px;
+                        height: 38px;
+                        line-height: 38px;
+                    }
+                    .right{
+                        float: right;
+                        div{
+                            display: inline-block;
+                            span{
+                                margin: 0 2px;
+                                &:first-child{
+                                    background: #aeb2b3;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        span{
+                            font-size: 14px;
+                            border: 1px solid #bcbfc1;
+                            display: inline-block;
+                            height: 36px;
+                            line-height: 36px;
+                            padding: 0 8px;
+                            cursor: pointer;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

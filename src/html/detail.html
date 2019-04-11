@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>商品列表-英雄联盟周边商城</title>
+    <link rel="stylesheet" href="/css/detail.css" />
+    <link rel="stylesheet" href="/lib/font/iconfont.css">
+  </head>
+  <body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+      <!-- 导航标题 -->
+      <div class="nav-title">
+        <span><a href="">商城首页</a></span>
+        <i></i>
+        <span id="nav-title"></span>
+      </div>
+      <!-- detail容器 -->
+      <div class="detail" id="detail"></div>
+      <script type="text/html" id="detail-template">
+        <div class="picture">
+                <div class="view_thumbs" id="gal1">
+                    <ul class="view-ul">
+                        <li class="current">
+                            <a href="#" data-image="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}">
+                            <img class="s" src="{{data.imgs[0]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.imgs[1]}}" data-zoom-image="{{data.imgs[1]}}">
+                            <img class="s" src="{{data.imgs[1]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.imgs[2]}}" data-zoom-image="{{data.imgs[2]}}">
+                            <img class="s" src="{{data.imgs[2]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.imgs[3]}}" data-zoom-image="{{data.imgs[3]}}">
+                            <img class="s" src="{{data.imgs[3]}}" /></a>
+                        </li>
+                        <li>
+                            <a href="#" data-image="{{data.imgs[4]}}" data-zoom-image="{{data.imgs[4]}}">
+                            <img class="s" src="{{data.imgs[4]}}" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="view_bd">
+                    <img class="zoom-img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}"/>
+                </div>
+            </div>
+            <div class="description">
+                <h2>{{data.title}}</h2>
+                <div>
+                    <span>现价：</span>
+                    <span>
+                        <span>￥</span>{{data.price}}
+                    </span>
+                </div>
+                <div>
+                    <div>
+                        最近销量<span class="saleNum">{{data.saleNum}}</span>
+                    </div>
+                    <div>
+                        累计评价<span class="comments">{{data.comments}}</span>
+                    </div>
+                    <div>
+                        累计收藏宝贝<span class="collection">{{data.collection}}</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        尺码：<span class="border">均码</span>
+                    </div>
+                    <div>
+                        数量：
+                        <div>
+                            <span id="reduce">-</span>
+                            <input type="text" value="1" id="inputNum">
+                            <span id="add">+</span>
+                        </div>
+                        <span>（库存充足）</span>
+                    </div>
+                </div>
+                <div>
+                    <div id="buy-now">立即购买</div>
+                    <div id="add-car">加入购物车</div>
+                    <div id="car-tag">
+                        <div></div>
+                        <p>成功加入</p>
+                        <p><a href="/html/cart.html">去购物车</a></p>
+                    </div>
+                    <div id="collect">
+                        <span>收藏宝贝</span>
+                        <b>已收藏</b>
+                    </div>
+                </div>
+                <div>
+                    <p><span></span>7天无理由退换货</p>
+                    <p><span></span>100%官方正品</p>
+                    <p><span></span>全场每单满199元包邮</p>
+                </div>
+            </div>
+      </script>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/detail.js"></script>
+  </body>
+</html>

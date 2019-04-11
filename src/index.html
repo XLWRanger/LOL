@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页-英雄联盟周边商城</title>
+	<link rel="stylesheet" href="/lib/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/lib/font/iconfont.css">
+</head>
+<body>
+	<!-- header容器 -->
+	<header id="header-container"></header>
+	<main>
+		<!-- 轮播图 -->
+		<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="/img/carousel/1.jpg"></div>
+					<div class="swiper-slide"><img src="/img/carousel/2.jpg"></div>
+					<div class="swiper-slide"><img src="/img/carousel/3.jpg"></div>
+					<div class="swiper-slide"><img src="/img/carousel/4.jpg"></div>
+				</div>
+				<!--分页器 -->
+				<div class="swiper-pagination"></div>
+		</div>
+		<!-- list的盒子 -->
+		<div id="list-container"></div>
+		<script type="text/html" id="list-monopoly">
+			<ul>
+				{{each list item}}
+					<li>
+						<a href="/html/list.html?type=3"><img src="{{item.img}}"></a>
+						<p>{{item.title}}</p>
+					</li>
+				{{ /each}}	
+			</ul>
+		</script>
+	</main>
+	<!-- footer容器 -->
+	<footer id="footer-container"></footer>
+<script src="/lib/requirejs/require.js" data-main="/js/index.js"></script>
+<script src="/lib/swiper/js/swiper.js"></script>
+</body>
+</html>

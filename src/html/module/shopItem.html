@@ -1,0 +1,23 @@
+
+<script type="text/html" id="shop-list">
+    <ul class="list-item">
+        {{each list item}}
+        <li>
+            <a href="/html/detail.html?id={{item.id}}">
+                <img class="list-imgs" src="{{item.imgs[0]}}"  data-hover="{{item.imgs[1]}}">
+            </a>
+            <span></span>
+            <p>{{item.title}}</p>
+            <p>￥{{item.price}}</p>
+            <div class="{{item.new}}"><img src="/img/new.png" /></div>
+            <div class="{{item.storage}}"><img src="/img/out.png" /></div>
+        </li>
+        {{ /each}}
+    </ul>
+    <!-- 下分页 -->
+    <div class="paging-bottom">
+        <span class="prev-page">上一页</span>
+        <div class="page-box"></div>
+        <span class="next-page">下一页</span>
+    </div>
+</script>

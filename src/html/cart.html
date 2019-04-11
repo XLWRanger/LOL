@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车-英雄联盟周边商城</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/lib/font/iconfont.css">
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <div class="cart-list">
+            <div class="left" id="left">
+                <div class="header">
+                    <input type="checkbox" class="checkAll" checked="checked">全选&nbsp;&nbsp;商品数量
+                    <span>单价(元)</span>
+                    <i>数量</i>
+                    <b>小计</b>
+                    <em>操作</em>
+                </div>
+                <ul id="list-container">
+                    <!-- list容器 -->
+                </ul>
+                <div class="footer">
+                    <div>
+                        <input type="checkbox" class="checkAll" checked="checked">全选&nbsp;&nbsp;
+                        <a href="/html/list.html?type=1">继续购物</a>
+                    </div>
+                    <div id="cleanCar">清空购物车</div>
+                </div>
+                <script type="text/html" id="shop-cart">
+                    {{each list item}}
+                    <li class="shop-list" data-id="{{item.id}}">
+                        <input type="checkbox" checked="checked" class="check">
+                        <img src="{{item.imgs[0]}}">
+                        <div class="info">
+                            <h2>{{item.title}}</h2>
+                            <p>颜色：彩色</p>
+                            <p>尺码：均码</p>
+                        </div>
+                        <div class="price">￥{{item.price}}</div>
+                        <div class="num">
+                            <span class="reduceNum">-</span>
+                            <input type="text" value="{{item.num}}" class="inputNum">
+                            <span class="addNum">+</span>
+                        </div>
+                        <div class="money">￥{{item.price*item.num}}</div>
+                        <div class="operate">
+                            <span class="delete">删除</span>
+                            <span class="collect">收藏</span>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="total" id="total">
+                <h3>我的购物车</h3>
+                <div class="bottom">
+                    <p><span>满199包邮</span><span id="isFreeSpan">-您还未满足包邮条件</span></p>
+                    <p id="noShop"><span id="isSatisfy"></span><span><a href="javascript:;">更多人气商品</a></span></p>
+                    <p>商品数量：<span id="numCount">0</span></p>
+                    <p>商品金额：<span>￥</span><span id="totalMoney">0.00</span></p>
+                    <p id="settlement">去结算</p>
+                    <div class="promise">
+                        <div>承诺</div>
+                        <div>
+                            <p>七天无理由退换货</p>
+                            <p>100%官方正品</p>
+                            <p>全场每单满199包邮</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 警告模态框 -->
+        <div class="tips" id="tips">
+            <div class="warning" id="warning">
+                <div class="wrap">
+                    <div><span>操作提示</span></div>
+                    <div id="warningTitle"></div>
+                    <div>
+                        <span id="okBtn">确定</span>
+                        <span id="cancelBtn">取消</span>
+                        <span id="okCollect">Ok</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-warning" id="modal-warning"></div>
+        </div>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>
