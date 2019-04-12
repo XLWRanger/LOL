@@ -16,6 +16,7 @@ define(["jquery"], function ($) {
 					this.closeLoginBox();
 					this.weixinLogin();
 					this.qqLogin();
+					this.search();
 					resolve();
 				})
 			})
@@ -54,14 +55,30 @@ define(["jquery"], function ($) {
 		//登录提交
 		submit() {
 			$("#login-btn1").on("click", () => {
-				$("#login").hide();
-				$("#modal").hide();
-				$("#login-btn").hide();
-				$("#after-login").show();
-				let username = $("#username").val();
-				$("#name").html(username);
-				//存
-				localStorage.setItem("login", JSON.stringify({username}));
+				let username = $("#username").val(),
+					password = $("#password").val();
+				$.ajax({
+					url: "http://localhost/api/v1/login.php",
+					method: "POST",
+					data: {username,password},
+					dataType: "json",
+					success : function(res){
+						if(res.res_code === 1){
+							$("#login").hide();
+							$("#modal").hide();
+							$("#login-btn").hide();
+							$("#after-login").show();
+							$("#name").html(username);
+							//存
+							localStorage.setItem("login", JSON.stringify({username}));
+						}else{
+							$("#err").show();
+							setInterval(() => {
+								$("#err").hide();
+							},3000)
+						}
+					}
+				})
 			})
 		}
 
@@ -120,6 +137,15 @@ define(["jquery"], function ($) {
 		qqLogin() {
 			$("#qq-login").on("click", () => {
 				$("#login-btn").click();
+			})
+		}
+
+		//搜索商品
+		search() {
+			$("#search-input").on("keyup",() => {
+				// $.ajax({
+				// 	url : ""
+				// })
 			})
 		}
 	}

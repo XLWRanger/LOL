@@ -1,6 +1,7 @@
-@import "base";
-@import "header";
-@import "footer";
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+
 body{
 	overflow: auto;
 }

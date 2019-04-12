@@ -1,7 +1,7 @@
-@import "base";
-@import "header";
-@import "footer";
-@import "shopItem";
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+@import "module/shopItem.scss";
 body{
     overflow: auto;
     main{

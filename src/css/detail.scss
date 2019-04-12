@@ -1,6 +1,6 @@
-@import "base";
-@import "header";
-@import "footer";
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
 body{
     overflow: auto;
     main{
@@ -248,7 +248,6 @@ body{
                        cursor: pointer;
                        color: #000;
                        span{
-                           float: left;
                            margin-right: 3px;
                            display: inline-block;
                            width: 16px;
