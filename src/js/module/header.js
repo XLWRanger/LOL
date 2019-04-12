@@ -143,9 +143,16 @@ define(["jquery"], function ($) {
 		//搜索商品
 		search() {
 			$("#search-input").on("keyup",() => {
-				// $.ajax({
-				// 	url : ""
-				// })
+				let keyword = $("#search-input").val();
+				$.getJSON("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&wd="+keyword,res => {
+					let list = res.s;
+					console.log(list);
+					let ul = $("<ul>");
+					list.forEach((item,index) => {
+						$("<li>").html(item).appendTo(ul);
+					})
+					$("#search-res").empty().show().append(ul);
+				})
 			})
 		}
 	}
