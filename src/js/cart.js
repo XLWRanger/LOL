@@ -9,11 +9,11 @@ require(["require_config"] , () => {
                 this.addNum();
                 this.reduceNum();
                 this.deleteShop();
-                this.okDelete();
-                this.cancelDelete();
                 this.closeCollect();
                 this.collect();
                 this.inputNum();
+                this.okDelete();
+                this.cancelDelete();
                 this.sumMoney();
                 this.sumNum();
                 this.warningModalCenter();
