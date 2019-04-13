@@ -79,6 +79,7 @@ header{
 						left: -17px;
 						background: rgba($color: #0b0b0b, $alpha: 0.7);
 						position: absolute;
+						z-index: 70;
 						li{
 							padding: 0;
 							width: 100%;
@@ -165,6 +166,7 @@ header{
 						width: 90px;
 						top: 75px;
 						position: absolute;
+						z-index: 70;
 						li{
 							padding: 0;
 							width: 100%;
